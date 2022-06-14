@@ -56,8 +56,8 @@ section{
 }
 
 .memory-card {
-  width: calc(25% - 10px);
-  height: calc(33.333% - 10px);
+  width: 125px;
+  height: 175px;;
   margin: 5px;
   position: relative;
   transform: scale(1);
