@@ -40,8 +40,8 @@ function checkCards() {
 }
 
 function cardsMatch() {
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
+  firstCard.removeEventListener("touchstart", flipCard);
+  secondCard.removeEventListener("touchstart", flipCard);
 
   win += 2;
 
@@ -75,7 +75,7 @@ function playAgain() {
   location.reload();
 }
 
-play.addEventListener("click", playAgain);
+play.addEventListener("touchstart", playAgain);
 
 (function laBeuteu() {
   cards.forEach((card) => {
@@ -84,6 +84,6 @@ play.addEventListener("click", playAgain);
   });
 })(); //IIFE
 
-cards.forEach((card) => card.addEventListener("click", flipCard));
+cards.forEach((card) => card.addEventListener("touchstart", flipCard));
 
-button.addEventListener("click", shipMove);
+button.addEventListener("touchstart", shipMove);
