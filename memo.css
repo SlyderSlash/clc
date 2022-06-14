@@ -48,7 +48,7 @@ section{
 .memory-game {
   width: calc(25% - 10px);
   height: calc(33.333% - 10px);
-  margin: auto;
+  margin: 50px 290px;
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
@@ -161,7 +161,7 @@ section{
     position: absolute;
 }
 .info #GG{
-  
+
   margin-top: 100px;
 }
 .info button{
