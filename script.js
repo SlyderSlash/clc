@@ -97,4 +97,4 @@ const timer = () => {
     setInterval(timer, 1000)
   }
 }
-appName.addEventListener("touchstart", () => {time()})
+appName.addEventListener("touchstart", () => {timer()})

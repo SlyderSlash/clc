@@ -92,3 +92,9 @@ header{
 .auteur a {
     color: #5fe109;
 }
+.row {
+  text-align: center;
+}
+#namer{
+  margin-top: 20%;
+}
