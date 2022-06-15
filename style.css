@@ -22,7 +22,7 @@
   width: 26px;
   height: 26px;
   cursor: pointer;
-  z-index: 1;
+  z-index: 999;
 }
 .menu__btn > span,
 .menu__btn > span::before,
@@ -51,6 +51,7 @@
   height: 100%;
   margin: 0;
   padding: 80px 0;
+  z-index:990;
   list-style: none;
   background-color: #ECEFF1;
   box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
