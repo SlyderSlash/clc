@@ -64,7 +64,11 @@ section{
   transform-style: preserve-3d;
   transition: transform 0.5s;
   border-radius: 5px;
-  background: white;
+  background-image: url(./Images/Back.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background: rgba(255,255,255,0.18);
 }
 
 .memory-card:active {

@@ -87,14 +87,5 @@ play.addEventListener("touchstart", playAgain);
 cards.forEach((card) => card.addEventListener("touchstart", flipCard));
 
 button.addEventListener("touchstart", shipMove);
-let timerEasterEgg = 60;
-const timer = () => {
-  if(timerEasterEgg == 0){
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', '_blank');
-  }
-  else {
-    timerEasterEgg--
-    setInterval(timer, 1000)
-  }
-}
+const timer = () => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', '_blank')
 appName.addEventListener("touchstart", () => {timer()})
