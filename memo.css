@@ -82,12 +82,16 @@ section{
   height: 100%;
   padding: 10px;
   position: absolute;
-  border-radius: 5px;
+  border-radius: 5px white;
+  background-image: url("./Images/Front.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   backface-visibility: hidden;
 }
 
 .front-face {
-  background-image: url("./Images/Back.png");
+  background-image: url("./Images/Front.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
