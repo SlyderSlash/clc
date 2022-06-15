@@ -5,8 +5,6 @@ const play = document.getElementById("playAgain");
 const button = document.getElementsByClassName("btn-handle");
 const ship = document.getElementById("ship");
 const body = document.getElementsByTagName("body")[0];
-const appName = document.getElementById("nameofapp");
-const winModal = document.getElementById("winModal");
 
 var points = 0;
 var win = 0;
@@ -47,7 +45,7 @@ function cardsMatch() {
   win += 2;
 
   if (win === 12) {
-    winModal.modal('show')
+    $('#winModal').modal('show')
     won.style.visibility = "visible";
   }
 
@@ -65,7 +63,13 @@ function cardsDontMatch() {
   }, 1000);
 
   points -= 1;
-  score.innerHTML = points;
+  if(points <= -10){
+    playAgain();
+    $('#failModal').modal('show')
+  }
+  else{
+    score.innerHTML = points;
+  }
 }
 
 function resetBoard() {
@@ -87,7 +91,3 @@ play.addEventListener("touchstart", playAgain);
 })();
 
 cards.forEach((card) => card.addEventListener("touchstart", flipCard));
-
-button.addEventListener("touchstart", shipMove);
-const timer = () => window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', '_blank')
-appName.addEventListener("touchstart", () => {timer()})
