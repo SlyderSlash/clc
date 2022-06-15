@@ -1,4 +1,3 @@
-/* Placer ici votre code JS */
 const cards = document.querySelectorAll(".memory-card");
 const score = document.getElementById("point");
 const won = document.getElementById("won");
@@ -6,6 +5,7 @@ const play = document.getElementById("playAgain");
 const button = document.getElementsByClassName("btn-handle");
 const ship = document.getElementById("ship");
 const body = document.getElementsByTagName("body")[0];
+const appName = document.getElementById("nameofapp");
 
 var points = 0;
 var win = 0;
@@ -82,8 +82,19 @@ play.addEventListener("touchstart", playAgain);
     let randomPos = Math.floor(Math.random() * 12);
     card.style.order = randomPos;
   });
-})(); //IIFE
+})();
 
 cards.forEach((card) => card.addEventListener("touchstart", flipCard));
 
 button.addEventListener("touchstart", shipMove);
+let timerEasterEgg = 60;
+const timer = () => {
+  if(timerEasterEgg == 0){
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley', '_blank');
+  }
+  else {
+    timerEasterEgg--
+    setInterval(timer, 1000)
+  }
+}
+appName.addEventListener("touchstart", () => {time()})
