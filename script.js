@@ -6,6 +6,7 @@ const button = document.getElementsByClassName("btn-handle");
 const ship = document.getElementById("ship");
 const body = document.getElementsByTagName("body")[0];
 const appName = document.getElementById("nameofapp");
+const winModal = document.getElementById("winModal");
 
 var points = 0;
 var win = 0;
@@ -46,6 +47,7 @@ function cardsMatch() {
   win += 2;
 
   if (win === 12) {
+    winModal.modal('show')
     won.style.visibility = "visible";
   }
 
