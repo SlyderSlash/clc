@@ -4,12 +4,223 @@
       <!-- En-tête du site-->
     <meta charset="utf-8">
     <title>clc</title><!-- Nom du projet-->
-    <link href="style.css" rel="stylesheet" type="text/css" /> <!-- Lien vers le fichier CSS-->
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="memo.css" rel="stylesheet" type="text/css" />
+    <link href="footer.css" rel="stylesheet" type="text/css" />
     <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-      <!-- Contenu du site-->
-    <script src="script.js"></script> <!-- Lien vers le fichier JS-->
+      <header>
+        <nav class="navbar navbar-expand-lg navbar bg-white">
+          <img src="https://www.alternance-professionnelle.fr/wp-content/uploads/2020/09/LOGO-AFPA-VERT-PNG.png">
+          <p id="nameofapp" class="navbar-brand">Casse Le Code</p>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Auteur</a>
+              </li>
+            </ul>
+          </div>
+          <div class="hamburger-menu">
+            <input id="menu__toggle" type="checkbox" />
+            <label class="menu__btn" for="menu__toggle">
+              <span></span>
+            </label>
+            <div class="menu__box">
+            <div class="list-group list-group-flush mx-3 mt-4 ">
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple text-white bg-secondary"><i
+                  class="fas fa-users fa-fw me-3"></i><span>Notre équipe</span></a>
+              <div class="our_team">
+                <div class="team_member">
+                  <a href="https://www.linkedin.com/in/snage-j-taupin/">
+                    <div class="member_img">
+                      <img src="./Images/jeremy_pdp.png" alt="our_team">
+                    </div>
+                    <h3>Jérémy.T</h3>
+                    <span>FORMATEUR</span>
+                  </a>
+                </div>
+                <div class="team_member">
+                  <a href="https://www.linkedin.com/in/ryan-leparq-06174b222/">
+                    <div class="member_img">
+                      <img src="./Images/ryan_pdp.png" alt="our_team">
+                    </div>
+                    <h3>Ryan.L</h3>
+                    <span>STAGIAIRE</span>
+                  </a>
+                </div>
+                <div class="team_member">
+                  <a href="https://www.linkedin.com/in/celia-zeraoulia-03b29b172/">
+                    <div class="member_img">
+                      <img src="./Images/celia_pdp.png" alt="our_team">
+                    </div>
+                    <h3>Célia.Z
+                    </h3>
+                    <span>STAGIAIRE</span>
+                  </a>
+                </div>
+                <div class="team_member">
+                  <a href="https://www.linkedin.com/in/yoan-laplace-115785222/">
+                    <div class="member_img">
+                      <img src="./Images/yoan_pdp.png" alt="our_team">
+                    </div>
+                    <h3>Yoan.L</h3>
+                    <span>STAGIAIRE</span>
+                  </a>
+                </div>
+                <div class="team_member">
+                  <a href="https://www.linkedin.com/in/christopher-rousseau-devweb/">
+                    <div class="member_img">
+                      <img src="./Images/chris_pdp.png" alt="our_team">
+                    </div>
+                    <h3>Chris.R</h3>
+                    <span>STAGIAIRE</span>
+                  </a>
+                </div>
+                <div class="team_member">
+                  <a href="https://www.linkedin.com/in/jules-bourbon-270b86238/">
+                    <div class="member_img">
+                      <img src="./Images/jules_pdp.png" alt="our_team">
+                    </div>
+                    <h3>Jules.B</h3>
+                    <span>STAGIAIRE</span>
+                  </div>
+                </a>
+              </div>
+              <a href="#" class="list-group-item list-group-item-action py-2 ripple text-white bg-secondary"><i
+                  class="fas fa-money-bill fa-fw me-3"></i><span>Nous contacter</span></a>
+              <div class="row">
+                <!-- Nous contactez -->
+                <div class=" col-sm-4 col-md col-sm-4  col-12 col">
+                  <h5 class="headin5_amrc col_white_amrc pt2">Informations</h5>
+                  <p><i class="fa fa-location-arrow"></i> 2 Rue Gaston Planté, 28000 Chartres </p>
+                  <p><i class="fa fa-phone"></i> 09 72 72 39 36 </p>
+                  <p><i class="fa fa fa-envelope"></i> contact@afpa.fr </p>
+                </div>
+
+                <!-- Menu NAV du bas en VERT -->
+                <a id="namer" href="#" class="list-group-item list-group-item-action py-2 ripple text-white bg-secondary"><i
+                    class="fas fa-money-bill fa-fw me-3"></i><span>Casse Le Code</span></a>
+                </ul>
+              </div>
+            </div>
+          </div>
+          </div>
+          </div>
+          <div class="container">
+            <p class="text-center text-white">Copyright @2022 ElonMusk AFPA </p>
+          </div>
+        </div>
+          </div>
+        </nav>
+      </header>
+      <section class="container mx-auto">
+        <section class="mx-auto">
+          <div class="info">
+            <h1 class="jeux">Jeux Mémories</h1>
+            <div class="row">
+              <div class="col-12 text-center points">
+                <p>Points: <span id="point"> 0</span></p>
+              </div>
+            </div>
+            <div id="won" class="text-center">
+              <h1 id="GG">Gagné</h1>
+              <button class="btn" id="playAgain">Rejouer ?</button>
+            </div>
+          </div>
+          <section class="memory-game">
+            <div class="memory-card" data-cards="card1">
+              <img class="front-face" src="Images/baby_yoda_.png" alt="avacado" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+            <div class="memory-card" data-cards="card1">
+              <img class="front-face" src="Images/baby_yoda_.png" alt="avacado" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+  
+            <div class="memory-card" data-cards="card2">
+              <img class="front-face" src="Images/Yoda.png" alt="burgers" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+            <div class="memory-card" data-cards="card2">
+              <img class="front-face" src="Images/Yoda.png" alt="burgers" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+  
+            <div class="memory-card" data-cards="card3">
+              <img class="front-face" src="Images/dipsy_.png"pngt="carrot" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+            <div class="memory-card" data-cards="card3">
+              <img class="front-face" src="Images/dipsy_.png"pngt="carrot" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+  
+            <div class="memory-card" data-cards="card4">
+              <img class="front-face" src="Images/Hulk.png" alt="cheese" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+            <div class="memory-card" data-cards="card4">
+              <img class="front-face" src="Images/Hulk.png" alt="cheese" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+  
+            <div class="memory-card" data-cards="card5">
+              <img class="front-face" src="Images/Shrek.png" alt="pancakes" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+            <div class="memory-card" data-cards="card5">
+              <img class="front-face" src="Images/Shrek.png" alt="pancakes" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+  
+            <div class="memory-card" data-cards="card6">
+              <img class="front-face" src="Images/Yoshi.png" alt="salad" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+            <div class="memory-card" data-cards="card6">
+              <img class="front-face" src="Images/Yoshi.png" alt="salad" />
+              <img class="back-face" src="Images/Back.png" alt="sky" />
+            </div>
+          </section>
+        </section>
+      </section>
+      <div class="modal fade" id="winModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLabel">Congrats</h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h4 class="modal-body">
+              You win !</br>
+              Ce jeu à était créé grâce au HTML/CSS</br>
+              et la partie dynamique réalisée en JavaScript
+            </h4>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div> 
+      <div class="modal fade" id="failModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h6 class="modal-title" id="exampleModalLabel">You failed...</h6>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <h4 class="modal-body">
+              Try Again
+            </h4>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div> 
     <script src="./js/bootstrap.bundle.js"></script>
+    <script src="./js/jquery.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
